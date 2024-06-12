@@ -4,8 +4,6 @@ import pytesseract
 import os
 from PIL import Image
 from tqdm import tqdm
-import re
-import string
 
 
 def text_clean_consolidate(consolidated_text):

@@ -1,18 +1,10 @@
-from flask import Flask, request, jsonify
-from waitress import serve
-
-# from langchain_community.llms import openai
-# from openai import OpenAI
+from flask import Flask, request, jsonify, send_from_directory
 from openai import OpenAI
 import traceback
 from pinecone import Pinecone
 from flask_cors import CORS
-from flask import Flask, send_from_directory
-from langchain.prompts.prompt import PromptTemplate
 from dotenv import load_dotenv
 import os
-
-from proxy_rotation import get_next_proxy, set_proxy_env
 from train import get_embedding
 
 load_dotenv(".env.local")
